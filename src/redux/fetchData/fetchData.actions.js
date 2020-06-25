@@ -38,3 +38,10 @@ export const getSlider = () => (dispatch) => {
     dispatch
   );
 };
+
+export const getCalculator = () => (dispatch) => {
+  getData(
+    'https://raw.githubusercontent.com/Bernabe-Felix/Bellotero/master/page2.json',
+    dispatch
+  );
+};

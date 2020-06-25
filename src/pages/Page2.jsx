@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Calculator from '../components/Calculator/Calculator';
 
-const Page2 = () => {
-  return <div></div>;
+import { connect } from 'react-redux';
+import { getCalculator } from '../redux/fetchData/fetchData.actions';
+import { createStructuredSelector } from 'reselect';
+import { selectIsCalculatorLoaded } from '../redux/fetchData/fetchData.selectors';
+
+const Page2 = ({ getCalculator, isCalculatorLoaded }) => {
+  useEffect(() => {
+    if (!isCalculatorLoaded) {
+      getCalculator();
+    }
+  }, [getCalculator, isCalculatorLoaded]);
+  return isCalculatorLoaded ? <Calculator /> : null;
 };
 
-export default Page2;
+const mapStateToProps = createStructuredSelector({
+  isCalculatorLoaded: selectIsCalculatorLoaded,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  getCalculator: () => dispatch(getCalculator()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page2);

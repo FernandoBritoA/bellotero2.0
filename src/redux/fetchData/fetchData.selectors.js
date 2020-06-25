@@ -13,9 +13,21 @@ export const selectIsMenuLoaded = createSelector(
   (data) => !!data.menu
 );
 
+//SLIDER
 export const selectSlider = createSelector([selectData], (data) => data.slider);
 
 export const selectIsSliderLoaded = createSelector(
   [selectData],
   (data) => !!data.slider
+);
+
+//CALCULATOR
+export const selectCalculator = createSelector(
+  [selectData],
+  (data) => data.calculator
+);
+
+export const selectIsCalculatorLoaded = createSelector(
+  [selectData],
+  (data) => !!data.calculator
 );

@@ -1,0 +1,30 @@
+.calculator-overlay {
+  height: 90%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10%;
+}
+
+.calculator-container {
+  background: white;
+  height: 80%;
+  width: 28rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  border: 1px solid grey;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.calculator-title {
+  color: var(--bg-primary);
+  margin: 0;
+  height: 3.5rem;
+  line-height: 4rem;
+  padding-left: 0.5rem;
+}
+
+.calculator-subtitle {
+  margin: 0;
+  padding: 0 15px;
+}
