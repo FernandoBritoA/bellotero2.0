@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
+import bgImg from './bgImg.jpg';
 import { Route, Switch } from 'react-router-dom';
 import Menu from './components/Menu/Menu';
 import HomePage from './pages/HomePage/HomePage';
@@ -18,6 +19,14 @@ const App = ({ getMenu, isMenuLoaded }) => {
 
   return isMenuLoaded ? (
     <div className='App'>
+      <div
+        className='bg-img'
+        style={{
+          backgroundImage: `url(${bgImg})`,
+          width: '100vw',
+          height: '100vh',
+        }}
+      />
       <Menu />
       <Switch>
         <Route exact path='/' component={HomePage} />

@@ -24,5 +24,14 @@ a:hover {
   box-sizing: border-box;
 }
 
+.App {
+  height: 100vh;
+}
+.bg-img {
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+}
+
 @media only screen and (max-width: 600px) {
 }
