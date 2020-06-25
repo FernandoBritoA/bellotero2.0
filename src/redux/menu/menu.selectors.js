@@ -4,10 +4,10 @@ const selectMenu = (state) => state.menu;
 
 export const selectMenuItems = createSelector(
   [selectMenu],
-  (menu) => menu.menu.items
+  (state) => state.menu.items
 );
 
-export const selectIsLoading = createSelector(
+export const selectIsMenuLoading = createSelector(
   [selectMenu],
   (menu) => menu.isLoading
 );

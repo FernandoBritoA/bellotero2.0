@@ -2,7 +2,7 @@ import menuActionTypes from './menu.actionTypes';
 
 const INITIAL_STATE = {
   menu: null,
-  isLoading: false,
+  isLoading: true,
   errorMsg: undefined,
 };
 

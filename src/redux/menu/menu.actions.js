@@ -21,8 +21,8 @@ export const getMenu = () => async (dispatch) => {
     const response = await axios.get(
       'https://raw.githubusercontent.com/Bernabe-Felix/Bellotero/master/app.json'
     );
-    const menu = response.data;
-    dispatch(fetchMenuSuccess(menu));
+    const data = response.data;
+    dispatch(fetchMenuSuccess(data.menu));
   } catch (error) {
     dispatch(fetchMenuFailure(error.message));
   }
