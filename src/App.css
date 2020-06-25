@@ -34,4 +34,9 @@ a:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  .bg-img {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 30% 50%;
+  }
 }

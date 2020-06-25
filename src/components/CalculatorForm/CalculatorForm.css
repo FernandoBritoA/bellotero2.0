@@ -21,3 +21,22 @@ span {
   color: var(--bg-primary);
   font-weight: bold;
 }
+
+@media only screen and (max-width: 600px) {
+  .calculator-form {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .form-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  input {
+    margin-top: 0.5rem;
+  }
+  span {
+    text-align: left;
+  }
+}

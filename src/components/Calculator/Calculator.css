@@ -8,7 +8,7 @@
 
 .calculator-container {
   background: white;
-  height: 80%;
+  height: 90%;
   width: 28rem;
   border-radius: 0.3rem;
   overflow: hidden;
@@ -27,4 +27,23 @@
 .calculator-subtitle {
   margin: 0;
   padding: 0 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .calculator-overlay {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .calculator-container {
+    width: 20rem;
+  }
+  .calculator-title {
+    height: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+  }
 }

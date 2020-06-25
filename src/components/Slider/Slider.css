@@ -8,7 +8,7 @@
 
 .slider-container {
   background: white;
-  height: 80%;
+  height: 90%;
   width: 28rem;
   border-radius: 0.3rem;
   overflow: hidden;
@@ -60,4 +60,21 @@ button.arr-btn:hover {
   background: white;
   border: 1px solid var(--bg-primary);
   color: var(--bg-primary);
+}
+
+@media only screen and (max-width: 600px) {
+  .slider-overlay {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .slider-container {
+    width: 20rem;
+  }
+  .slider-title {
+    font-size: 1.7rem;
+  }
 }
