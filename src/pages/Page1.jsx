@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Slider from '../components/Slider/Slider';
 
-const Page1 = () => {
-  return <div></div>;
+import { connect } from 'react-redux';
+import { getSlider } from '../redux/slider/slider.actions';
+import { createStructuredSelector } from 'reselect';
+import { selectIsSliderLoading } from '../redux/slider/slider.selectors';
+
+const Page1 = ({ getSlider, isSliderLoading }) => {
+  useEffect(() => {
+    getSlider();
+  }, [getSlider]);
+
+  return isSliderLoading ? null : <Slider />;
 };
 
-export default Page1;
+const mapDispatchToProps = (dispatch) => ({
+  getSlider: () => dispatch(getSlider()),
+});
+
+const mapStateToProps = createStructuredSelector({
+  isSliderLoading: selectIsSliderLoading,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page1);

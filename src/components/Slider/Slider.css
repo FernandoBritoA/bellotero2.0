@@ -1,0 +1,63 @@
+.slider-overlay {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.slider-container {
+  height: 60%;
+  width: 65vw;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  border: 1px solid grey;
+  border-top: none;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.slider-title {
+  background: var(--bg-primary);
+  color: white;
+  margin: 0;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  padding-left: 0.5rem;
+}
+
+.arrow-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.current {
+  font-size: 1.5rem;
+  color: silver;
+  padding-right: 1rem;
+}
+
+.arr-btn {
+  background: var(--bg-primary);
+  color: white;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  width: 4rem;
+  transition: 1.5s;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  overflow: hidden;
+  outline: none;
+}
+
+button.arr-btn:hover {
+  cursor: pointer;
+  background: white;
+  border: 1px solid var(--bg-primary);
+  color: var(--bg-primary);
+}
