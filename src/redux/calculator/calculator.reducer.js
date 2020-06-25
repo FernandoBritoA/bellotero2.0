@@ -1,26 +1,26 @@
-import menuActionTypes from './menu.actionTypes';
+import calculatorAT from './calculator.actionTypes';
 
 const INITIAL_STATE = {
-  menu: null,
+  calculator: null,
   isLoading: true,
   errorMsg: undefined,
 };
 
-const menuReducer = (state = INITIAL_STATE, action) => {
+const calculatorReducer = (state = INITIAL_STATE, action) => {
   const { type, payload } = action;
 
   switch (type) {
-    case menuActionTypes.FETCH_MENU_START:
+    case calculatorAT.FETCH_CALCULATOR_START:
       return { ...state, isLoading: true };
 
-    case menuActionTypes.FETCH_MENU_SUCCESS:
+    case calculatorAT.FETCH_CALCULATOR_SUCCESS:
       return {
         ...state,
-        menu: payload,
+        calculator: payload,
         isLoading: false,
       };
 
-    case menuActionTypes.FETCH_MENU_FAILURE:
+    case calculatorAT.FETCH_CALCULATOR_FAILURE:
       return {
         ...state,
         errorMsg: payload,
@@ -31,4 +31,4 @@ const menuReducer = (state = INITIAL_STATE, action) => {
       return state;
   }
 };
-export default menuReducer;
+export default calculatorReducer;

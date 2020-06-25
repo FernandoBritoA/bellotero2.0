@@ -2,21 +2,18 @@ import React, { useEffect } from 'react';
 import Slider from '../components/Slider/Slider';
 
 import { connect } from 'react-redux';
-import { getSlider } from '../redux/slider/slider.actions';
+import { getSlider } from '../redux/fetchData/fetchData.actions';
 import { createStructuredSelector } from 'reselect';
-import {
-  selectIsSliderLoading,
-  selectIsSliderLoaded,
-} from '../redux/slider/slider.selectors';
+import { selectIsSliderLoaded } from '../redux/fetchData/fetchData.selectors';
 
-const Page1 = ({ getSlider, isSliderLoading, isSliderLoaded }) => {
+const Page1 = ({ getSlider, isSliderLoaded }) => {
   useEffect(() => {
     if (!isSliderLoaded) {
       getSlider();
     }
   }, [getSlider, isSliderLoaded]);
 
-  return isSliderLoading ? null : <Slider />;
+  return isSliderLoaded ? <Slider /> : null;
 };
 
 const mapDispatchToProps = (dispatch) => ({
@@ -24,7 +21,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const mapStateToProps = createStructuredSelector({
-  isSliderLoading: selectIsSliderLoading,
   isSliderLoaded: selectIsSliderLoaded,
 });
 

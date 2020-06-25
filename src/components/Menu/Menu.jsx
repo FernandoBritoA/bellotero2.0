@@ -5,7 +5,7 @@ import MenuItem from '../MenuItem/MenuItem';
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { selectMenuItems } from '../../redux/menu/menu.selectors';
+import { selectMenuItems } from '../../redux/fetchData/fetchData.selectors';
 
 const Menu = ({ menuItems }) => {
   return (

@@ -2,30 +2,34 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Menu from './components/Menu/Menu';
+import HomePage from './pages/HomePage/HomePage';
 import Page1 from './pages/Page1';
+import Page2 from './pages/Page2';
 
 import { connect } from 'react-redux';
-import { getMenu } from './redux/menu/menu.actions';
+import { getMenu } from './redux/fetchData/fetchData.actions';
 import { createStructuredSelector } from 'reselect';
-import { selectIsMenuLoading } from './redux/menu/menu.selectors';
+import { selectIsMenuLoaded } from './redux/fetchData/fetchData.selectors';
 
-const App = ({ getMenu, isMenuLoading }) => {
+const App = ({ getMenu, isMenuLoaded }) => {
   useEffect(() => {
     getMenu();
   }, [getMenu]);
 
-  return isMenuLoading ? null : (
+  return isMenuLoaded ? (
     <div className='App'>
       <Menu />
       <Switch>
+        <Route exact path='/' component={HomePage} />
         <Route exact path='/page-1' component={Page1} />
+        <Route exact path='/page-2' component={Page2} />
       </Switch>
     </div>
-  );
+  ) : null;
 };
 
 const mapStateToProps = createStructuredSelector({
-  isMenuLoading: selectIsMenuLoading,
+  isMenuLoaded: selectIsMenuLoaded,
 });
 
 const mapDispatchToProps = (dispatch) => ({

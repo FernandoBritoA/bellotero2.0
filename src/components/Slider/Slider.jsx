@@ -4,7 +4,7 @@ import Review from '../Review/Review';
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { selectSlider } from '../../redux/slider/slider.selectors';
+import { selectSlider } from '../../redux/fetchData/fetchData.selectors';
 
 const Slider = ({ slider }) => {
   const { title, reviews } = slider;
