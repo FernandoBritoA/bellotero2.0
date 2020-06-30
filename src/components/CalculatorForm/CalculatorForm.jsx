@@ -73,13 +73,6 @@ const CalculatorForm = () => {
       default:
         break;
     }
-    //const input = document.querySelector('input[type=range]');
-    //input.style.setProperty('--value', Number(value));
-    //console.log(input);
-    /*for (const input of document.querySelectorAll('input[type=range]')) {
-      console.log(input);
-      input.style.setProperty('--value', Number(value));
-    }*/
 
     setInputs({ ...inputs, [name]: Number(value) });
   };
