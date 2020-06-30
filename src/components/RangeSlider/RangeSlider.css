@@ -1,0 +1,33 @@
+.range-slider {
+  width: 100%;
+  margin-top: 22px;
+  height: 4px;
+  -webkit-appearance: none;
+  background: var(--bg-primary);
+  background: linear-gradient(
+    to right,
+    var(--bg-primary) calc(var(--value) * 1%),
+    #f0f2ff 0
+  );
+}
+
+input[type='range']::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 2px 8px 0 rgba(7, 30, 179, 0.24);
+  border: solid 5px #071eb3;
+  background-color: #ffffff;
+}

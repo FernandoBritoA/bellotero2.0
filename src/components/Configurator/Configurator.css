@@ -1,12 +1,12 @@
 .configurator {
   margin-bottom: 66px;
+  padding-right: 100px;
 }
 
 .label-input {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-right: 100px;
 }
 
 .configurator-label {
@@ -20,6 +20,7 @@
 
 .configurator-input {
   height: 40px;
+  width: 80px;
   font-size: 36px;
   font-weight: 500;
   line-height: 1.11;
