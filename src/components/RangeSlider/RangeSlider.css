@@ -3,12 +3,6 @@
   margin-top: 22px;
   height: 4px;
   -webkit-appearance: none;
-  background: var(--bg-primary);
-  background: linear-gradient(
-    to right,
-    var(--bg-primary) calc(var(--value) * 1%),
-    #f0f2ff 0
-  );
 }
 
 input[type='range']::-ms-track {

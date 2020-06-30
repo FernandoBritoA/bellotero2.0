@@ -16,37 +16,9 @@ const CalculatorForm = () => {
     (employees * 1337 + parseFloat(foodSavings)).toFixed(2)
   );
 
-  const [slider1, setSlider1] = useState({
-    input: null,
-    min: null,
-    max: null,
-    num: null,
-  });
-  const [slider2, setSlider2] = useState({
-    input: null,
-    min: null,
-    max: null,
-    num: null,
-  });
-
   useEffect(() => {
     calculateFoodSavings();
     calculateAnualSavings();
-
-    if (!slider1.input) {
-      const input = document.getElementById('isMoney');
-      const min = Number(input.getAttribute('min'));
-      const max = Number(input.getAttribute('max'));
-      const num = (max - min) / 100;
-      setSlider1({ input, min, max, num });
-    }
-    if (!slider2.input) {
-      const input = document.getElementById('isNotMoney');
-      const min = Number(input.getAttribute('min'));
-      const max = Number(input.getAttribute('max'));
-      const num = (max - min) / 100;
-      setSlider2({ input, min, max, num });
-    }
 
     // eslint-disable-next-line
   }, [monthlySpending, employees, foodSavings]);
@@ -57,17 +29,9 @@ const CalculatorForm = () => {
     switch (name) {
       case 'monthlySpending':
         if (value < 1 || value > 100) return;
-        slider1.input.style.setProperty(
-          '--value',
-          String(Number(value - slider1.min) / slider1.num)
-        );
         break;
       case 'employees':
         if (value < 1 || value > 10) return;
-        slider2.input.style.setProperty(
-          '--value',
-          String(Number(value - slider2.min) / slider2.num)
-        );
         break;
 
       default:
