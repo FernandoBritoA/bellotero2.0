@@ -18,3 +18,17 @@
 ul {
   display: flex;
 }
+
+@media only screen and (max-width: 800px) {
+  .menu {
+    padding: 19px 25px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .menu {
+    padding: 19px 8px;
+  }
+  .bellotero {
+    width: 100px;
+  }
+}

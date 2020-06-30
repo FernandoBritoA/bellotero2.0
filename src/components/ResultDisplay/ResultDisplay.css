@@ -28,3 +28,13 @@
   color: var(--black);
   text-align: right;
 }
+
+@media only screen and (max-width: 800px) {
+  .result-display {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .final-result {
+    font-size: 44px;
+  }
+}

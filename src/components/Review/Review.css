@@ -16,21 +16,13 @@
   font-family: Roboto;
   font-size: 32px;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.5;
-  letter-spacing: normal;
   color: var(--black);
 }
 .position {
   height: 16px;
   font-family: Roboto;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: var(--greyish);
 }
 .comment {
@@ -39,15 +31,49 @@
   font-family: Roboto;
   font-size: 24px;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.33;
-  letter-spacing: normal;
   color: var(--black);
 }
 
+@media only screen and (max-width: 1200px) {
+  .review {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
 @media only screen and (max-width: 600px) {
+  .review {
+    width: 100%;
+    align-items: center;
+    padding-left: 10px;
+    margin: 0;
+  }
   .comment {
-    font-size: 1.4rem;
+    width: 340px;
+    margin-right: auto;
+    margin-left: 80px;
+  }
+  .name-position {
+    margin-right: auto;
+    margin-left: 80px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .review {
+    width: 100%;
+    align-items: center;
+    padding-left: 10px;
+    margin: 0;
+  }
+  .comment {
+    width: 340px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .name-position {
+    margin-right: auto;
+    margin-left: 0;
   }
 }
