@@ -1,14 +1,17 @@
 import React from 'react';
 import './MenuItem.css';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-const MenuItem = ({ ...props }) => {
+const MenuItem = ({ location, ...props }) => {
   const { text, route } = props;
+  const active = location.pathname === '/' + route;
   return (
-    <li className='menu-item'>
-      <Link to={route}>{text}</Link>
+    <li>
+      <Link to={route} className={`${active ? 'active' : ''} menu-item`}>
+        {text}
+      </Link>
     </li>
   );
 };
 
-export default MenuItem;
+export default withRouter(MenuItem);

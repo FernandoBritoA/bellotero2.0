@@ -1,39 +1,20 @@
 .menu {
   width: 100%;
-  height: 10%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.title {
-  height: 100%;
-  margin-left: 2%;
-  display: flex;
-  align-items: center;
-}
-
-.hidden {
-  display: none;
-}
-
-.menu-items {
-  width: auto;
-  margin-right: 2%;
+  height: 64px;
+  background-color: #ffffff;
+  padding: 19px 174px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin: 0;
 }
 
-@media only screen and (max-width: 600px) {
-  .menu-items {
-    margin-right: 0.5rem;
-    padding: 0;
-  }
-
-  .main {
-    display: none;
-  }
-  .hidden {
-    display: flex;
-  }
+.bellotero {
+  width: 133px;
+  height: 26px;
+  object-fit: contain;
+  margin-right: auto;
+}
+ul {
+  display: flex;
 }

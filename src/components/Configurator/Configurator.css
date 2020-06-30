@@ -1,0 +1,48 @@
+.configurator {
+  margin-bottom: 66px;
+}
+
+.label-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 100px;
+}
+
+.configurator-label {
+  width: 157px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--black);
+  text-align: bottom;
+}
+
+.configurator-input {
+  height: 40px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 0.77px;
+  text-align: right;
+  color: var(--black);
+}
+
+.money-input {
+  width: 117px;
+}
+
+.input-container {
+  position: relative;
+}
+.unit {
+  position: absolute;
+  left: 5px;
+  width: 15px;
+  opacity: 0.24;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.67;
+  letter-spacing: 0.51px;
+  color: var(--black);
+}

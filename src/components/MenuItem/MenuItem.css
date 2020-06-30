@@ -1,14 +1,27 @@
 .menu-item {
+  height: 16px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  color: #071eb3;
+}
+
+.active {
+  padding-top: 20px;
+  border-top: 4px solid #071eb3;
+}
+
+li {
   list-style: none;
-  margin-right: 2rem;
+  margin-right: 40px;
 }
-
-.menu-item:last-child {
+li:first-child {
+  margin-right: 58px;
+}
+li:last-child {
   margin-right: 0;
-}
-
-@media only screen and (max-width: 600px) {
-  .menu-item {
-    margin-right: 0.5rem;
-  }
 }

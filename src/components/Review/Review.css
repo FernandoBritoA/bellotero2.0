@@ -1,19 +1,49 @@
 .review {
-  padding: 0 15px;
+  width: 1002px;
+  height: 254px;
+  background-color: #ffffff;
+  margin-right: 266px;
+  margin-left: 172px;
+  padding: 32px;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .name {
-  margin: 0;
+  width: 158px;
+  height: 48px;
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--black);
 }
 .position {
-  margin: 0;
-  margin-left: 3rem;
-  color: silver;
+  height: 16px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--greyish);
 }
 .comment {
-  font-size: 1.5rem;
-  margin: 0;
-  margin-top: 0.5rem;
+  width: 565px;
+  height: 190px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: var(--black);
 }
 
 @media only screen and (max-width: 600px) {

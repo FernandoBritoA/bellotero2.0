@@ -8,14 +8,17 @@ import { selectCalculator } from '../../redux/fetchData/fetchData.selectors';
 
 const Calculator = ({ calculator }) => {
   const { title, description } = calculator;
+  const titleArr = title.split(' ');
+  const title2 = titleArr.pop();
+  const title1 = titleArr.join(' ');
   return (
     <div className='calculator-overlay'>
-      <div className='calculator-container'>
-        <h1 className='calculator-title'>{title}</h1>
-        <h4 className='calculator-subtitle'>{description}</h4>
-
-        <CalculatorForm />
+      <div className='calculator-text'>
+        <h1 className='calculator-title'>{title1}</h1>
+        <h1 className='calculator-title'>{title2}</h1>
+        <p className='calculator-subtitle'>{description}</p>
       </div>
+      <CalculatorForm />
     </div>
   );
 };

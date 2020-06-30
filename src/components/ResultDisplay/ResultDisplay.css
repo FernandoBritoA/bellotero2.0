@@ -1,0 +1,29 @@
+.result-display {
+  display: flex;
+  flex-direction: column;
+  margin-right: 56px;
+  margin-top: 20px;
+}
+
+.final-result {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-align: right;
+  color: #071eb3;
+  text-align: right;
+}
+.result-unit {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 0.77px;
+  color: #071eb3;
+}
+
+.result-label {
+  font-size: 14px;
+  color: var(--black);
+  text-align: right;
+}

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './CalculatorForm.css';
+import Configurator from '../Configurator/Configurator';
+import ResultDisplay from '../ResultDisplay/ResultDisplay';
 
 const CalculatorForm = () => {
   const [inputs, setInputs] = useState({
-    monthlySpending: 1,
+    monthlySpending: 10,
     employees: 1,
   });
   const { monthlySpending, employees } = inputs;
@@ -45,38 +47,35 @@ const CalculatorForm = () => {
 
   return (
     <div className='calculator-form'>
-      <div className='form-block'>
-        <label>Monthly Ingredient Spending: (1-100) </label>
-        <div>
-          <label>$ </label>
-          <input
-            type='number'
-            min={1}
-            max={100}
-            name='monthlySpending'
-            value={monthlySpending}
-            onChange={(e) => handleChange(e)}
-          ></input>
-        </div>
-      </div>
-      <div className='form-block'>
-        <label>Full-Time Employees: (1-10)</label>
-        <input
-          type='number'
-          min={1}
-          max={10}
-          name='employees'
-          value={employees}
-          onChange={(e) => handleChange(e)}
-        ></input>
-      </div>
-      <div className='form-block'>
-        <label>Estimated Food Cost Savings = </label>
-        <span>{`$ ${foodSavings}`}</span>
-      </div>
-      <div className='form-block'>
-        <label>Your Estimated Anual Savings = </label>
-        <span>{`$ ${anualSavings}`}</span>
+      <Configurator
+        label='Monthly ingredient spending'
+        handleChange={handleChange}
+        type='number'
+        min={10}
+        max={100}
+        name='monthlySpending'
+        value={monthlySpending}
+        isMoney={true}
+      />
+      <Configurator
+        label='Full-time employees that process invoices'
+        handleChange={handleChange}
+        type='number'
+        min={1}
+        max={10}
+        name='employees'
+        value={employees}
+        isMoney={false}
+      />
+      <div className='results-block'>
+        <ResultDisplay
+          label='Estimated cost food savings'
+          result={foodSavings}
+        />
+        <ResultDisplay
+          label='Your estimated annual savings'
+          result={anualSavings}
+        />
       </div>
     </div>
   );

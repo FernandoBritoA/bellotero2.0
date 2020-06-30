@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import bgImg from './bgImg.jpg';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Menu from './components/Menu/Menu';
-import HomePage from './pages/HomePage/HomePage';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 
@@ -19,17 +17,11 @@ const App = ({ getMenu, isMenuLoaded }) => {
 
   return isMenuLoaded ? (
     <div className='App'>
-      <div
-        className='bg-img'
-        style={{
-          backgroundImage: `url(${bgImg})`,
-          width: '100vw',
-          height: '100vh',
-        }}
-      />
       <Menu />
       <Switch>
-        <Route exact path='/' component={HomePage} />
+        <Route exact path='/'>
+          <Redirect to='/page-1' />
+        </Route>
         <Route exact path='/page-1' component={Page1} />
         <Route exact path='/page-2' component={Page2} />
       </Switch>

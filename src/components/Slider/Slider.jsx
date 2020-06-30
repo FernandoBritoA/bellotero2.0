@@ -25,20 +25,18 @@ const Slider = ({ slider }) => {
   };
 
   return (
-    <div className='slider-overlay'>
-      <div className='slider-container'>
-        <h1 className='slider-title'>{title}</h1>
-        <Review props={reviews[index]} />
+    <div className='slider'>
+      <h1 className='slider-title'>{title}</h1>
+      <Review props={reviews[index]} />
 
-        <div className='arrow-buttons'>
-          <div className='current'>{`${index + 1}/${reviews.length}`}</div>
-          <button className='arr-btn' onClick={() => changeSlide('left')}>
-            {'<'}
-          </button>
-          <button className='arr-btn' onClick={() => changeSlide('right')}>
-            {'>'}
-          </button>
-        </div>
+      <div className='arrow-buttons'>
+        <div className='current'>{`${index + 1}/${reviews.length}`}</div>
+        <button className='arr-btn' onClick={() => changeSlide('left')}>
+          &#8592;
+        </button>
+        <button className='arr-btn' onClick={() => changeSlide('right')}>
+          &rarr;
+        </button>
       </div>
     </div>
   );
